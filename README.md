@@ -1,0 +1,1 @@
+# 1C-conf-terminal-and-sklad
