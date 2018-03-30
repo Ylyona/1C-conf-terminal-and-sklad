@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<DocumentJournal uuid="79cf3369-4bcf-477a-b9de-9ac109a05dec">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentJournalSelection.ЖурналДокументовЗапч" category="Selection">
+				<xr:TypeId>8c69af13-ca6e-4f49-af94-beace91a0efe</xr:TypeId>
+				<xr:ValueId>b84d71da-97dd-4cb0-9ac8-10a757ec1a31</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalList.ЖурналДокументовЗапч" category="List">
+				<xr:TypeId>eec0578b-412f-44e6-89ef-94bd6c09e063</xr:TypeId>
+				<xr:ValueId>e2d2d38a-187f-425c-82da-932d0557b83e</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalManager.ЖурналДокументовЗапч" category="Manager">
+				<xr:TypeId>798b913d-f37a-4957-aacb-2d8cecb2c6fb</xr:TypeId>
+				<xr:ValueId>62ba10dc-8f86-4c87-9c2e-68b3acbabe7d</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ЖурналДокументовЗапч</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал документов по комплектующим</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<RegisteredDocuments>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ДокПриходКомплектующих</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ДокПриемДекталейНаСклад</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ДокПередачаДеталейМенеджеру</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ДокУстановкаДетНаТермин</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ДокНеиспрДет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ДокСписаниеДеталей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ДокДеталиНаРемонт</xr:Item>
+			</RegisteredDocuments>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects/>
+	</DocumentJournal>
+</MetaDataObject>

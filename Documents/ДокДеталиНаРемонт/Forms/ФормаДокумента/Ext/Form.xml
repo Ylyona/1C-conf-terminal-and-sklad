@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Width>70</Width>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="107">
+			<VerticalStretch>true</VerticalStretch>
+			<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="108"/>
+			<ChildItems>
+				<UsualGroup name="ПраваяКолонка" id="56">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая колонка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ПраваяКолонкаРасширеннаяПодсказка" id="57"/>
+					<ChildItems>
+						<InputField name="Номер" id="1">
+							<DataPath>Объект.Number</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="Дата" id="4">
+							<DataPath>Объект.Date</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="СервисныйПункт" id="71">
+							<DataPath>Объект.СервисныйПункт</DataPath>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="СервисныйПунктКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="СервисныйПунктРасширеннаяПодсказка" id="73"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Левая" id="109">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Левая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ЛеваяРасширеннаяПодсказка" id="110"/>
+					<ChildItems>
+						<InputField name="Менеджер" id="111">
+							<DataPath>Объект.Менеджер</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Менеджер (Исполнитель)</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="МенеджерКонтекстноеМеню" id="112"/>
+							<ExtendedTooltip name="МенеджерРасширеннаяПодсказка" id="113"/>
+						</InputField>
+						<InputField name="Терминал" id="114">
+							<DataPath>Объект.Терминал</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="ТерминалКонтекстноеМеню" id="115"/>
+							<ExtendedTooltip name="ТерминалРасширеннаяПодсказка" id="116"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ИсточникПоступленияНаСклад" id="117">
+			<DataPath>Объект.ИсточникПоступленияНаСклад</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступление деталей</v8:content>
+				</v8:item>
+			</Title>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>От менеджера</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.СтатусДетали.EnumValue.ВЗапас</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>С терминала</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.СтатусДетали.EnumValue.Используется</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Неисправные детали</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.СтатусДетали.EnumValue.Неисправно</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ИсточникПоступленияНаСкладКонтекстноеМеню" id="118"/>
+			<ExtendedTooltip name="ИсточникПоступленияНаСкладРасширеннаяПодсказка" id="119"/>
+			<Events>
+				<Event name="OnChange">ИсточникПоступленияНаСкладПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Комментарий" id="74">
+			<DataPath>Объект.Комментарий</DataPath>
+			<Height>2</Height>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="75"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="76"/>
+		</InputField>
+		<Pages name="ТипыДеталей" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типы деталей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типы деталей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ТипыДеталейРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<Page name="РасходныеДетали" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходные детали</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходные детали</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="РасходныеДеталиРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<Table name="РасходныеДетали1" id="77">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.РасходныеДетали</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РасходныеДетали1КонтекстноеМеню" id="78"/>
+							<AutoCommandBar name="РасходныеДетали1КоманднаяПанель" id="79"/>
+							<ExtendedTooltip name="РасходныеДетали1РасширеннаяПодсказка" id="80"/>
+							<SearchStringAddition name="РасходныеДетали1СтрокаПоиска" id="81">
+								<AdditionSource>
+									<Item>РасходныеДетали1</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РасходныеДетали1СтрокаПоискаКонтекстноеМеню" id="82"/>
+								<ExtendedTooltip name="РасходныеДетали1СтрокаПоискаРасширеннаяПодсказка" id="83"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РасходныеДетали1СостояниеПросмотра" id="84">
+								<AdditionSource>
+									<Item>РасходныеДетали1</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РасходныеДетали1СостояниеПросмотраКонтекстноеМеню" id="85"/>
+								<ExtendedTooltip name="РасходныеДетали1СостояниеПросмотраРасширеннаяПодсказка" id="86"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РасходныеДетали1УправлениеПоиском" id="87">
+								<AdditionSource>
+									<Item>РасходныеДетали1</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РасходныеДетали1УправлениеПоискомКонтекстноеМеню" id="88"/>
+								<ExtendedTooltip name="РасходныеДетали1УправлениеПоискомРасширеннаяПодсказка" id="89"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="РасходныеДетали1НомерСтроки" id="90">
+									<DataPath>Объект.РасходныеДетали.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасходныеДетали1НомерСтрокиКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="РасходныеДетали1НомерСтрокиРасширеннаяПодсказка" id="92"/>
+								</LabelField>
+								<InputField name="РасходныеДетали1ДетальНаРемРасх" id="93">
+									<DataPath>Объект.РасходныеДетали.ДетальНаРемРасх</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="РасходныеДетали1ДетальНаРемРасхКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="РасходныеДетали1ДетальНаРемРасхРасширеннаяПодсказка" id="95"/>
+									<Events>
+										<Event name="OnChange">РасходныеДетали1ДетальНаРемРасхПриИзменении</Event>
+										<Event name="StartChoice">РасходныеДетали1ДетальНаРемРасхНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="РасходныеДетали1КоличествоДоступноРасх" id="102">
+									<DataPath>Объект.РасходныеДетали.КоличествоДоступноРасх</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество (Доступно)</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасходныеДетали1КоличествоДоступноРасхКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="РасходныеДетали1КоличествоДоступноРасхРасширеннаяПодсказка" id="104"/>
+								</InputField>
+								<InputField name="РасходныеДетали1КоличествоНаРемРасх" id="96">
+									<DataPath>Объект.РасходныеДетали.КоличествоНаРемРасх</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасходныеДетали1КоличествоНаРемРасхКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="РасходныеДетали1КоличествоНаРемРасхРасширеннаяПодсказка" id="98"/>
+									<Events>
+										<Event name="OnChange">РасходныеДетали1КоличествоНаРемРасхПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="РасходныеДетали1КомментарийНаремРасх" id="99">
+									<DataPath>Объект.РасходныеДетали.КомментарийНаремРасх</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасходныеДетали1КомментарийНаремРасхКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="РасходныеДетали1КомментарийНаремРасхРасширеннаяПодсказка" id="101"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ОсновныеДетали" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основные детали</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основные детали</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОсновныеДеталиРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<Table name="ОсновныеДетали1" id="16">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ОсновныеДетали</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОсновныеДетали1КонтекстноеМеню" id="17"/>
+							<AutoCommandBar name="ОсновныеДетали1КоманднаяПанель" id="18"/>
+							<ExtendedTooltip name="ОсновныеДетали1РасширеннаяПодсказка" id="19"/>
+							<SearchStringAddition name="ОсновныеДетали1СтрокаПоиска" id="20">
+								<AdditionSource>
+									<Item>ОсновныеДетали1</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОсновныеДетали1СтрокаПоискаКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="ОсновныеДетали1СтрокаПоискаРасширеннаяПодсказка" id="22"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОсновныеДетали1СостояниеПросмотра" id="23">
+								<AdditionSource>
+									<Item>ОсновныеДетали1</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОсновныеДетали1СостояниеПросмотраКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="ОсновныеДетали1СостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОсновныеДетали1УправлениеПоиском" id="26">
+								<AdditionSource>
+									<Item>ОсновныеДетали1</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОсновныеДетали1УправлениеПоискомКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="ОсновныеДетали1УправлениеПоискомРасширеннаяПодсказка" id="28"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ОсновныеДетали1НомерСтроки" id="29">
+									<DataPath>Объект.ОсновныеДетали.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОсновныеДетали1НомерСтрокиКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ОсновныеДетали1НомерСтрокиРасширеннаяПодсказка" id="31"/>
+								</LabelField>
+								<InputField name="ОсновныеДетали1ДетальПриемНаСкл" id="32">
+									<DataPath>Объект.ОсновныеДетали.ДетальПриемНаСкл</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>ИсточникПоступленияНаСклад</xr:Name>
+											<xr:DataPath xsi:type="xs:string">1/0:bc2f121c-2aaa-427f-bc40-96c7ac7c90bf</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="ОсновныеДетали1ДетальПриемНаСклКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ОсновныеДетали1ДетальПриемНаСклРасширеннаяПодсказка" id="34"/>
+									<Events>
+										<Event name="OnChange">ОсновныеДетали1ДетальПриемНаСклПриИзменении</Event>
+										<Event name="StartChoice">ОсновныеДетали1ДетальПриемНаСклНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<LabelField name="ОсновныеДетали1ДетальПриемНаСклСерийныйНомерСправочник" id="50">
+									<DataPath>Объект.ОсновныеДетали.ДетальПриемНаСкл.СерийныйНомерСправочник</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Серийный номер детали</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОсновныеДетали1ДетальПриемНаСклСерийныйНомерСправочникКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ОсновныеДетали1ДетальПриемНаСклСерийныйНомерСправочникРасширеннаяПодсказка" id="52"/>
+								</LabelField>
+								<InputField name="ОсновныеДетали1Коментарий" id="38">
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОсновныеДетали1КоментарийКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ОсновныеДетали1КоментарийРасширеннаяПодсказка" id="40"/>
+								</InputField>
+								<InputField name="ОсновныеДетали1КомментарийТЧ" id="65">
+									<DataPath>Объект.ОсновныеДетали.КомментарийТЧ</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Неисправность</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОсновныеДетали1КомментарийТЧКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ОсновныеДетали1КомментарийТЧРасширеннаяПодсказка" id="67"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ДокДеталиНаРемонт</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.РасходныеДетали">
+					<Column name="КоличествоДоступноРасх" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество </v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>25</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

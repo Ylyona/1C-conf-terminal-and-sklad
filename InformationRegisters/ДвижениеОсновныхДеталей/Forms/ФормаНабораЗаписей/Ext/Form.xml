@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<AutoCommandBar name="" id="-1"/>
+	<ChildItems>
+		<Table name="НаборЗаписей" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>НаборЗаписей</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НаборЗаписейКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="НаборЗаписейКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="НаборЗаписейРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="НаборЗаписейСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>НаборЗаписей</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="НаборЗаписейСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НаборЗаписейСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>НаборЗаписей</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="НаборЗаписейСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НаборЗаписейУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>НаборЗаписей</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="НаборЗаписейУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="НомерСтроки" id="14">
+					<DataPath>НаборЗаписей.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерСтрокиКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="НомерСтрокиРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+				<InputField name="Регистратор" id="17">
+					<DataPath>НаборЗаписей.Recorder</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РегистраторКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="РегистраторРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="Период" id="20">
+					<DataPath>НаборЗаписей.Period</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="Деталь" id="23">
+					<DataPath>НаборЗаписей.Деталь</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДетальКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ДетальРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="Статус" id="26">
+					<DataPath>НаборЗаписей.Статус</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="Менеджер" id="29">
+					<DataPath>НаборЗаписей.Менеджер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МенеджерКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="МенеджерРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="СервисТочка" id="32">
+					<DataPath>НаборЗаписей.СервисТочка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СервисТочкаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="СервисТочкаРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="Терминал" id="35">
+					<DataPath>НаборЗаписей.Терминал</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТерминалКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ТерминалРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="ПоставщикРег" id="38">
+					<DataPath>1/0:c24a7836-ef39-4a52-843b-b248b1a743e6</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПоставщикРегКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ПоставщикРегРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="Исполнитель" id="41">
+					<DataPath>НаборЗаписей.Исполнитель</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИсполнительКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ИсполнительРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="Комментарий" id="44">
+					<DataPath>НаборЗаписей.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="46"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборЗаписей" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ДвижениеОсновныхДеталей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+</Form>

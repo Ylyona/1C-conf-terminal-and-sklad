@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Поставщик" id="47">
+			<DataPath>Объект.Покупатель</DataPath>
+			<ContextMenu name="ПоставщикКонтекстноеМеню" id="48"/>
+			<ExtendedTooltip name="ПоставщикРасширеннаяПодсказка" id="49"/>
+		</InputField>
+		<InputField name="Покупатель" id="50">
+			<DataPath>Объект.Продавец</DataPath>
+			<ContextMenu name="ПокупательКонтекстноеМеню" id="51"/>
+			<ExtendedTooltip name="ПокупательРасширеннаяПодсказка" id="52"/>
+		</InputField>
+		<Table name="НовыеТерминалы" id="19">
+			<Representation>List</Representation>
+			<TitleLocation>Auto</TitleLocation>
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ТерминалыПродажа</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НовыеТерминалыКонтекстноеМеню" id="20"/>
+			<AutoCommandBar name="НовыеТерминалыКоманднаяПанель" id="21"/>
+			<ExtendedTooltip name="НовыеТерминалыРасширеннаяПодсказка" id="22"/>
+			<SearchStringAddition name="НовыеТерминалыСтрокаПоиска" id="23">
+				<AdditionSource>
+					<Item>НовыеТерминалы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НовыеТерминалыСтрокаПоискаКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="НовыеТерминалыСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НовыеТерминалыСостояниеПросмотра" id="26">
+				<AdditionSource>
+					<Item>НовыеТерминалы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НовыеТерминалыСостояниеПросмотраКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="НовыеТерминалыСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НовыеТерминалыУправлениеПоиском" id="29">
+				<AdditionSource>
+					<Item>НовыеТерминалы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НовыеТерминалыУправлениеПоискомКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="НовыеТерминалыУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="НовыеТерминалыНомерСтроки" id="32">
+					<DataPath>Объект.ТерминалыПродажа.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НовыеТерминалыНомерСтрокиКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="НовыеТерминалыНомерСтрокиРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<InputField name="НовыеТерминалыТерминал" id="35">
+					<DataPath>Объект.ТерминалыПродажа.Терминал</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.ТерминалыПродажа.RowsCount</FooterDataPath>
+					<ContextMenu name="НовыеТерминалыТерминалКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="НовыеТерминалыТерминалРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<LabelField name="НовыеТерминалыТерминалСерийныйНомерТермин" id="61">
+					<DataPath>Объект.ТерминалыПродажа.Терминал.СерийныйНомерТермин</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НовыеТерминалыТерминалСерийныйНомерТерминКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="НовыеТерминалыТерминалСерийныйНомерТерминРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<InputField name="НовыеТерминалыСерийныйНомер" id="38">
+					<DataPath>1/0:35b00442-7e8c-4a6f-9300-a3c28cb50ac6/0:0dd78f57-0e03-4bc5-954b-a736af36adde</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НовыеТерминалыСерийныйНомерКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="НовыеТерминалыСерийныйНомерРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="НовыеТерминалыХарактеристика" id="41">
+					<DataPath>Объект.ТерминалыПродажа.Характеристика</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НовыеТерминалыХарактеристикаКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="НовыеТерминалыХарактеристикаРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="НовыеТерминалыЦена" id="44">
+					<DataPath>Объект.ТерминалыПродажа.Цена</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.ТерминалыПродажа.TotalЦена</FooterDataPath>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧН=</v8:content>
+						</v8:item>
+					</Format>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧН=</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="НовыеТерминалыЦенаКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="НовыеТерминалыЦенаРасширеннаяПодсказка" id="46"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<LabelField name="КоличествоТерминалов" id="56">
+			<DataPath>Объект.ТерминалыПродажа.RowsCount</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество терминалов</v8:content>
+				</v8:item>
+			</Title>
+			<Width>3</Width>
+			<ContextMenu name="КоличествоТерминаловКонтекстноеМеню" id="57"/>
+			<ExtendedTooltip name="КоличествоТерминаловРасширеннаяПодсказка" id="58"/>
+		</LabelField>
+		<LabelField name="СуммаДокумента" id="64">
+			<DataPath>Объект.ТерминалыПродажа.TotalЦена</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Width>10</Width>
+			<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="65"/>
+			<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="66"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ДокПродажаТерминалов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.ТерминалыПродажа"/>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

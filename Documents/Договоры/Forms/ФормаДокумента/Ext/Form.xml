@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="22">
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата договора</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Действует" id="13">
+					<DataPath>Объект.Действует</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действует по</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>14</Width>
+					<ContextMenu name="ДействуетКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ДействуетРасширеннаяПодсказка" id="15"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="48">
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="49"/>
+		</UsualGroup>
+		<InputField name="ФормаДоговора" id="42">
+			<DataPath>Объект.ФормаДоговора</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма договора</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В 1С существует две формы документа: Устная и Письменная. Письменная форма указывает на то, что документ сущестует в письменном виде. Устный назначается, если терминал установлен на устной договеренности с контрагентом и письменного договора аренды нет.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<ContextMenu name="ФормаДоговораКонтекстноеМеню" id="43"/>
+			<ExtendedTooltip name="ФормаДоговораРасширеннаяПодсказка" id="44"/>
+			<Events>
+				<Event name="OnChange">ФормаДоговораПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="НомерПисьменногоДоговора" id="45">
+			<DataPath>Объект.НомерПисьменногоДоговора</DataPath>
+			<Visible>false</Visible>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Укажите №, указанный в письменном договоре.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<ContextMenu name="НомерПисьменногоДоговораКонтекстноеМеню" id="46"/>
+			<ExtendedTooltip name="НомерПисьменногоДоговораРасширеннаяПодсказка" id="47"/>
+		</InputField>
+		<InputField name="АдресУстановки" id="39">
+			<DataPath>Объект.АдресУстановки</DataPath>
+			<ContextMenu name="АдресУстановкиКонтекстноеМеню" id="40"/>
+			<ExtendedTooltip name="АдресУстановкиРасширеннаяПодсказка" id="41"/>
+		</InputField>
+		<InputField name="Район" id="53">
+			<DataPath>Объект.Район</DataPath>
+			<ContextMenu name="РайонКонтекстноеМеню" id="54"/>
+			<ExtendedTooltip name="РайонРасширеннаяПодсказка" id="55"/>
+		</InputField>
+		<InputField name="Контрагент" id="7">
+			<DataPath>Объект.Контрагент</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КонтрагентКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">КонтрагентПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ВЛице" id="19">
+			<DataPath>Объект.ВЛице</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВЛицеКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ВЛицеРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="ТерминалДоговор" id="30">
+			<DataPath>1/0:a878d28c-42a6-48cc-ad80-8631973b01d5</DataPath>
+			<ContextMenu name="ТерминалДоговорКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="ТерминалДоговорРасширеннаяПодсказка" id="32"/>
+		</InputField>
+		<InputField name="ОтноситсяКГрупе" id="50">
+			<DataPath>Объект.ОтноситсяКГрупе</DataPath>
+			<ContextMenu name="ОтноситсяКГрупеКонтекстноеМеню" id="51"/>
+			<ExtendedTooltip name="ОтноситсяКГрупеРасширеннаяПодсказка" id="52"/>
+		</InputField>
+		<InputField name="СтоимостьАренды" id="10">
+			<DataPath>Объект.Стоимость</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Соимость аренды</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СтоимостьАрендыКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="СтоимостьАрендыРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ДопИнфо" id="27">
+			<DataPath>Объект.ДопИнфо</DataPath>
+			<Width>51</Width>
+			<Height>2</Height>
+			<ContextMenu name="ДопИнфоКонтекстноеМеню" id="28"/>
+			<ExtendedTooltip name="ДопИнфоРасширеннаяПодсказка" id="29"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Договоры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

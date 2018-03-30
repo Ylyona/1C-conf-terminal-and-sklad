@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Width>93</Width>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКнопкаПечать" id="89">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КнопкаПечать</CommandName>
+				<ExtendedTooltip name="ФормаКнопкаПечатьРасширеннаяПодсказка" id="90"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ЛеваяКолонка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Левая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Width>41</Width>
+					<Group>Vertical</Group>
+					<HorizontalSpacing>Single</HorizontalSpacing>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЛеваяКолонкаРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<InputField name="Дата" id="8">
+							<DataPath>Объект.Date</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="10"/>
+						</InputField>
+						<UsualGroup name="Номера" id="46">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номера</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<VerticalSpacing>Single</VerticalSpacing>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="НомераРасширеннаяПодсказка" id="47"/>
+							<ChildItems>
+								<InputField name="СерийныйНомерПерем" id="40">
+									<DataPath>Объект.ТекущееНазваниеТерминала.СерийныйНомерТермин</DataPath>
+									<Enabled>false</Enabled>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="СерийныйНомерПеремКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="СерийныйНомерПеремРасширеннаяПодсказка" id="42"/>
+								</InputField>
+								<InputField name="ПеремОткКод" id="37">
+									<DataPath>Объект.ТекущееНазваниеТерминала.Code</DataPath>
+									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ПеремОткКодКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="ПеремОткКодРасширеннаяПодсказка" id="39"/>
+									<Events>
+										<Event name="OnChange">ПеремОткКодПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ПорядкНомерПерем" id="22">
+									<DataPath>Объект.ТекущееНазваниеТерминала.IDТерминала</DataPath>
+									<Enabled>false</Enabled>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПорядкНомерПеремКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ПорядкНомерПеремРасширеннаяПодсказка" id="24"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ПеремОтк" id="11">
+							<DataPath>Объект.ТекущееНазваниеТерминала</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Терминал</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПеремОткКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ПеремОткРасширеннаяПодсказка" id="13"/>
+							<Events>
+								<Event name="OnChange">ПеремОткПриИзменении</Event>
+								<Event name="StartListChoice">ПеремОткНачалоВыбораИзСписка</Event>
+							</Events>
+						</InputField>
+						<InputField name="Откуда" id="43">
+							<DataPath>1/0:c9b20724-fa07-473a-97fa-85ec0e69ac2d</DataPath>
+							<Enabled>false</Enabled>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перемещение"ОТКУДА"</v8:content>
+								</v8:item>
+							</Title>
+							<Height>1</Height>
+							<ContextMenu name="ОткудаКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ОткудаРасширеннаяПодсказка" id="45"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ПраваяКолонка" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Width>44</Width>
+					<Group>Vertical</Group>
+					<HorizontalSpacing>Single</HorizontalSpacing>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>DontUse</ThroughAlign>
+					<ExtendedTooltip name="ПраваяКолонкаРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<InputField name="МеткаНаименование" id="53">
+							<DataPath>Объект.Метка</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Метка</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="МеткаНаименованиеКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="МеткаНаименованиеРасширеннаяПодсказка" id="55"/>
+						</InputField>
+						<InputField name="Принял" id="31">
+							<DataPath>Объект.Метка.Менеджер.Description</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Принял</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Left</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>1</Width>
+							<ContextMenu name="ПринялКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ПринялРасширеннаяПодсказка" id="33"/>
+							<Events>
+								<Event name="OnChange">ПринялПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДоговорАрендыВвод" id="77">
+							<DataPath>Объект.ДоговорАрендыВвод</DataPath>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="ДоговорАрендыВводКонтекстноеМеню" id="78"/>
+							<ExtendedTooltip name="ДоговорАрендыВводРасширеннаяПодсказка" id="79"/>
+							<Events>
+								<Event name="StartChoice">ДоговорАрендыВводНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДоговорАрендыВводКонтрагент" id="80">
+							<DataPath>Объект.ДоговорАрендыВвод.Контрагент</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Арендатор/
+Арендодатель</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Left</TitleLocation>
+							<ContextMenu name="ДоговорАрендыВводКонтрагентКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="ДоговорАрендыВводКонтрагентРасширеннаяПодсказка" id="82"/>
+						</InputField>
+						<InputField name="ДоговорАрендыВводКонтрагентРуководительКонтр" id="83">
+							<DataPath>Объект.ДоговорАрендыВвод.Контрагент.РуководительКонтр</DataPath>
+							<ContextMenu name="ДоговорАрендыВводКонтрагентРуководительКонтрКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="ДоговорАрендыВводКонтрагентРуководительКонтрРасширеннаяПодсказка" id="85"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="КомментарийПеремТермин" id="86">
+			<DataPath>Объект.КомментарийПеремТермин</DataPath>
+			<ContextMenu name="КомментарийПеремТерминКонтекстноеМеню" id="87"/>
+			<ExtendedTooltip name="КомментарийПеремТерминРасширеннаяПодсказка" id="88"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ПервоеПеремещениеТерминала</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ОтКого" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передал</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>701</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КнопкаПечать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопка печать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Print</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КнопкаПечать</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

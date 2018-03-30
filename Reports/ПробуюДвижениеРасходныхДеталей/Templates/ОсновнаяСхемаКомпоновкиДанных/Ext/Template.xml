@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаРемонте</dataPath>
+			<field>НаРемонте</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На ремонте</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Используется</dataPath>
+			<field>Используется</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используется</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТерминалРасх</dataPath>
+			<field>ТерминалРасх</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СервисныйПунктРасх</dataPath>
+			<field>СервисныйПунктРасх</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервисный пункт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДетальРасхНаРем</dataPath>
+			<field>ДетальРасхНаРем</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВЗапасе</dataPath>
+			<field>ВЗапасе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В запасе</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МенеджерРасхЗапас</dataPath>
+			<field>МенеджерРасхЗапас</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДетальРасхЗапас</dataPath>
+			<field>ДетальРасхЗапас</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Списано</dataPath>
+			<field>Списано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списано</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДетальРасхНаСклад</dataPath>
+			<field>ДетальРасхНаСклад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Неисправно</dataPath>
+			<field>Неисправно</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неисправно</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расходная деталь</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаСкладе</dataPath>
+			<field>НаСкладе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На складе</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДетальРасх</dataPath>
+			<field>ДетальРасх</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Комплектующие.Ссылка КАК Ссылка,
+	ВЗапасОстатки.КоличествоРасхЗапасОстаток КАК ВЗапасе,
+	ИспользуетсяОстатки.КоличествоРасхОстаток КАК Используется,
+	НаРемонтОстатки.КоличествоРасхНаСкладОстаток КАК НаРемонте,
+	НаСкладОстатки.КоличествоРасхНаСкладОстаток КАК НаСкладе,
+	НеисправноОстатки.КоличествоРасхНаСкладОстаток КАК Неисправно,
+	СписаноОстатки.КоличествоРасхНаСкладОстаток КАК Списано
+ИЗ
+	Справочник.Комплектующие КАК Комплектующие
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.НаСклад.Остатки КАК НаСкладОстатки
+		ПО (НаСкладОстатки.ДетальРасхНаСклад = Комплектующие.Ссылка)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.НаРемонт.Остатки КАК НаРемонтОстатки
+		ПО (НаРемонтОстатки.ДетальРасхНаРем = Комплектующие.Ссылка)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Неисправно.Остатки КАК НеисправноОстатки
+		ПО (НеисправноОстатки.ДетальРасхНаРем = Комплектующие.Ссылка)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Списано.Остатки КАК СписаноОстатки
+		ПО (СписаноОстатки.ДетальРасхНаРем = Комплектующие.Ссылка)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ВЗапас.Остатки КАК ВЗапасОстатки
+		ПО (ВЗапасОстатки.ДетальРасхЗапас = Комплектующие.Ссылка)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Используется.Остатки КАК ИспользуетсяОстатки
+		ПО (ИспользуетсяОстатки.ДетальРасх = Комплектующие.Ссылка)
+ГДЕ
+	ВЗапасОстатки.КоличествоРасхЗапасОстаток &gt; 0
+	ИЛИ ИспользуетсяОстатки.КоличествоРасхОстаток &gt; 0
+	ИЛИ НаРемонтОстатки.КоличествоРасхНаСкладОстаток &gt; 0
+	ИЛИ НаСкладОстатки.КоличествоРасхНаСкладОстаток &gt; 0
+	ИЛИ НеисправноОстатки.КоличествоРасхНаСкладОстаток &gt; 0
+	ИЛИ СписаноОстатки.КоличествоРасхНаСкладОстаток &gt; 0</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Движение расходных деталей</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВЗапасе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Используется</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НаРемонте</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НаСкладе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Неисправно</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Списано</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
+					</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>1156ef25-7986-4a9f-a9de-85e0d3cf89cc</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Яркий</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>9dc2a78d-fa44-47d4-9e1d-1f3bde8968a0</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Auto</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>39a49c93-6338-49c4-aa5b-e5fb2e0f063f</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Auto</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>a9408174-d74f-4ca9-92cd-044fab4d2b7b</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
