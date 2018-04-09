@@ -48,6 +48,12 @@
 				</Button>
 			</ChildItems>
 		</CommandBar>
+		<InputField name="ПорядковыйНомер" id="188">
+			<DataPath>Объект.Code</DataPath>
+			<Width>17</Width>
+			<ContextMenu name="ПорядковыйНомерКонтекстноеМеню" id="189"/>
+			<ExtendedTooltip name="ПорядковыйНомерРасширеннаяПодсказка" id="190"/>
+		</InputField>
 		<UsualGroup name="Шапка" id="1">
 			<Title>
 				<v8:item>
@@ -55,7 +61,6 @@
 					<v8:content>Шапка</v8:content>
 				</v8:item>
 			</Title>
-			<Height>10</Height>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -73,33 +78,29 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Колонка1РасширеннаяПодсказка" id="4"/>
 					<ChildItems>
-						<UsualGroup name="Группа1" id="269">
-							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="270"/>
-							<ChildItems>
-								<InputField name="ПорядковыйНомер" id="188">
-									<DataPath>Объект.Code</DataPath>
-									<Width>17</Width>
-									<ContextMenu name="ПорядковыйНомерКонтекстноеМеню" id="189"/>
-									<ExtendedTooltip name="ПорядковыйНомерРасширеннаяПодсказка" id="190"/>
-								</InputField>
-								<InputField name="IDТерминала" id="19">
-									<DataPath>Объект.IDТерминала</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>IDТерминала</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<MultiLine>false</MultiLine>
-									<ContextMenu name="IDТерминалаКонтекстноеМеню" id="20"/>
-									<ExtendedTooltip name="IDТерминалаРасширеннаяПодсказка" id="21"/>
-									<Events>
-										<Event name="Opening">ПорядковыйНомерОткрытие</Event>
-									</Events>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
+						<InputField name="НомерВСистеме" id="391">
+							<DataPath>Объект.НомерВСистеме</DataPath>
+							<TitleHeight>1</TitleHeight>
+							<Width>19</Width>
+							<ContextMenu name="НомерВСистемеКонтекстноеМеню" id="392"/>
+							<ExtendedTooltip name="НомерВСистемеРасширеннаяПодсказка" id="393"/>
+						</InputField>
+						<InputField name="IDТерминала" id="19">
+							<DataPath>Объект.IDТерминала</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>IDТерминала</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<MultiLine>false</MultiLine>
+							<ContextMenu name="IDТерминалаКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="IDТерминалаРасширеннаяПодсказка" id="21"/>
+							<Events>
+								<Event name="Opening">ПорядковыйНомерОткрытие</Event>
+							</Events>
+						</InputField>
 						<InputField name="Наименование" id="191">
 							<DataPath>Объект.Description</DataPath>
 							<ContextMenu name="НаименованиеКонтекстноеМеню" id="192"/>
@@ -124,6 +125,13 @@
 					<v8:content>Метка</v8:content>
 				</v8:item>
 			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполняется автоматически при создании документов Ввод в эксплуатацию/Перемещение.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
 			<ContextMenu name="ТекущаяМеткаКонтекстноеМеню" id="305"/>
 			<ExtendedTooltip name="ТекущаяМеткаРасширеннаяПодсказка" id="306"/>
 		</InputField>
@@ -136,9 +144,23 @@
 					<v8:content>Менеджер</v8:content>
 				</v8:item>
 			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполняется автоматически при создании документов Ввод в эксплуатацию/Перемещение.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
 			<ContextMenu name="ТекущаяМеткаМенеджерНаименованиеКонтекстноеМеню" id="308"/>
 			<ExtendedTooltip name="ТекущаяМеткаМенеджерНаименованиеРасширеннаяПодсказка" id="309"/>
 		</InputField>
+		<CheckBoxField name="Эксплуатация" id="394">
+			<DataPath>Объект.Эксплуатация</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЭксплуатацияКонтекстноеМеню" id="395"/>
+			<ExtendedTooltip name="ЭксплуатацияРасширеннаяПодсказка" id="396"/>
+		</CheckBoxField>
 		<InputField name="ВажнаяИнформация" id="301">
 			<DataPath>Объект.ВажнаяИнформация</DataPath>
 			<TitleTextColor>#800000</TitleTextColor>
@@ -192,7 +214,7 @@
 									<ExtendedTooltip name="ФискальныйСерверРасширеннаяПодсказка" id="367"/>
 								</InputField>
 								<CheckBoxField name="Дублекат" id="271">
-									<DataPath>Объект.Дублекат</DataPath>
+									<DataPath>Объект.Дубликат</DataPath>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ДублекатКонтекстноеМеню" id="272"/>
 									<ExtendedTooltip name="ДублекатРасширеннаяПодсказка" id="273"/>
@@ -360,6 +382,11 @@
 							<ContextMenu name="ДоговорПроведенКонтекстноеМеню" id="381"/>
 							<ExtendedTooltip name="ДоговорПроведенРасширеннаяПодсказка" id="382"/>
 						</CheckBoxField>
+						<InputField name="Невидимоеполе" id="397">
+							<DataPath>НаРуках</DataPath>
+							<ContextMenu name="НевидимоеполеКонтекстноеМеню" id="398"/>
+							<ExtendedTooltip name="НевидимоеполеРасширеннаяПодсказка" id="399"/>
+						</InputField>
 						<InputField name="Договор" id="353">
 							<DataPath>Договор</DataPath>
 							<ReadOnly>true</ReadOnly>
@@ -395,9 +422,11 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Дата последней оплаты</v8:content>
+									<v8:content>Дата последней 
+оплаты</v8:content>
 								</v8:item>
 							</Title>
+							<TitleLocation>Left</TitleLocation>
 							<ContextMenu name="ПоследняяОплатаКонтекстноеМеню" id="363"/>
 							<ExtendedTooltip name="ПоследняяОплатаРасширеннаяПодсказка" id="364"/>
 						</InputField>
@@ -536,6 +565,17 @@
 				<v8:DateQualifiers>
 					<v8:DateFractions>DateTime</v8:DateFractions>
 				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Ввод" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввод</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ПервоеПеремещениеТерминала</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>

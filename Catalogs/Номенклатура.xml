@@ -31,7 +31,7 @@
 					<v8:content>Номенклатура</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment/>
+			<Comment>Данный справочник содержит номенклатуру (наименование) Расходных и Основных комплектующих.</Comment>
 			<Hierarchical>false</Hierarchical>
 			<HierarchyType>HierarchyFoldersAndItems</HierarchyType>
 			<LimitLevelCount>false</LimitLevelCount>
@@ -306,7 +306,12 @@
 			<ExtendedObjectPresentation/>
 			<ListPresentation/>
 			<ExtendedListPresentation/>
-			<Explanation/>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данный справочник содержит номенклатуру (наименование) Расходных и Основных комплектующих.</v8:content>
+				</v8:item>
+			</Explanation>
 			<CreateOnInput>Use</CreateOnInput>
 			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 		</Properties>

@@ -162,7 +162,6 @@
 			<Catalog>Номенклатура</Catalog>
 			<Catalog>Метки</Catalog>
 			<Catalog>РайоныУстановкиТерминалов</Catalog>
-			<Catalog>ТерминалыПокупка</Catalog>
 			<Catalog>НоменклатураТерминал</Catalog>
 			<Document>ПервоеПеремещениеТерминала</Document>
 			<Document>ПеремещениеТерминалов</Document>
@@ -189,14 +188,13 @@
 			<Report>ОтчетПоОплатеАренды</Report>
 			<Report>ОтчетПоРемонтуОсновныхДеталей</Report>
 			<Report>ДвижениеОсновныхСредств</Report>
-			<Report>ОстатокРасходныхДеталей</Report>
+			<Report>ОтчетПоступлениеРасходныхДеталей</Report>
 			<Report>ОстатокРДУМенеджеров</Report>
-			<Report>ПробуюДвижениеРасходныхДеталей</Report>
-			<Report>ОтчетПоРемонтуРасходныхДеталейВторойВариант</Report>
-			<Report>ОплатаАрендыКирилл</Report>
-			<Report>ОтчетПоРемонтуРасходныхСредствПерваяВерсия</Report>
+			<Report>ОтчетПоРемонтуРасходныхДеталей</Report>
 			<Report>ОтчетПокупкаТерминалов</Report>
 			<Report>ОтчетПродажаТерминалов</Report>
+			<Report>ОплатаАрендыКирилл</Report>
+			<Report>ОтчетОстатокРасхНаСкладе</Report>
 			<DataProcessor>ПокупкаТерминал</DataProcessor>
 			<InformationRegister>СвязиТерминаловИДоговоров</InformationRegister>
 			<InformationRegister>ДействующиеДоговора</InformationRegister>

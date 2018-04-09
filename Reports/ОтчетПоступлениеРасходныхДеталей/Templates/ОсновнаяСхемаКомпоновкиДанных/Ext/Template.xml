@@ -7,70 +7,54 @@
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных1</name>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>КоличествоРасхЗапасПриход</dataPath>
-			<field>КоличествоРасхЗапасПриход</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Приход</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>КоличествоРасхЗапасКонечныйОстаток</dataPath>
-			<field>КоличествоРасхЗапасКонечныйОстаток</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Конечный остаток</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>КоличествоРасхЗапасРасход</dataPath>
-			<field>КоличествоРасхЗапасРасход</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Расход</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ДетальРасхЗапас</dataPath>
-			<field>ДетальРасхЗапас</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Деталь</v8:content>
-				</v8:item>
-			</title>
+			<dataPath>ДетальРасхНаСклад</dataPath>
+			<field>ДетальРасхНаСклад</field>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>МенеджерРасхЗапас</dataPath>
-			<field>МенеджерРасхЗапас</field>
+			<dataPath>КоличествоРасхНаСкладПриход</dataPath>
+			<field>КоличествоРасхНаСкладПриход</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Менеджер</v8:content>
+					<v8:content>Документ</v8:content>
 				</v8:item>
 			</title>
 			<role>
-				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
 			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсполнительРасхНаСклад</dataPath>
+			<field>ИсполнительРасхНаСклад</field>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ВЗапасОстаткиИОбороты.ДетальРасхЗапас КАК ДетальРасхЗапас,
-	ВЗапасОстаткиИОбороты.МенеджерРасхЗапас КАК МенеджерРасхЗапас,
-	ВЗапасОстаткиИОбороты.КоличествоРасхЗапасПриход КАК КоличествоРасхЗапасПриход,
-	ВЗапасОстаткиИОбороты.КоличествоРасхЗапасРасход КАК КоличествоРасхЗапасРасход,
-	ВЗапасОстаткиИОбороты.КоличествоРасхЗапасКонечныйОстаток КАК КоличествоРасхЗапасКонечныйОстаток
+	НаСкладОстаткиИОбороты.ДетальРасхНаСклад КАК ДетальРасхНаСклад,
+	НаСкладОстаткиИОбороты.КоличествоРасхНаСкладПриход КАК КоличествоРасхНаСкладПриход,
+	НаСклад.Регистратор,
+	НаСклад.Период,
+	НаСклад.ИсполнительРасхНаСклад
 ИЗ
-	РегистрНакопления.ВЗапас.ОстаткиИОбороты КАК ВЗапасОстаткиИОбороты</query>
+	РегистрНакопления.НаСклад.ОстаткиИОбороты КАК НаСкладОстаткиИОбороты,
+	РегистрНакопления.НаСклад КАК НаСклад
+ГДЕ
+	НаСклад.ВидДвижения = &amp;Расход</query>
 	</dataSet>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -106,128 +90,117 @@
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 		<useRestriction>false</useRestriction>
 	</parameter>
-	<settingsVariant>
-		<dcsset:name>Основной</dcsset:name>
-		<dcsset:presentation xsi:type="v8:LocalStringType">
+	<parameter>
+		<name>Расход</name>
+		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Остаток расходных деталей у менеджеров</v8:content>
+				<v8:content>Расход</v8:content>
 			</v8:item>
-		</dcsset:presentation>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise">d4p1:AccumulationRecordType</v8:Type>
+		</valueType>
+		<value xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d3p1:AccumulationRecordType">Receipt</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Период</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ДетальРасхЗапас</dcsset:field>
+					<dcsset:field>Регистратор</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КоличествоРасхЗапасНачальныйОстаток</dcsset:field>
+					<dcsset:field>ДетальРасхНаСклад</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КоличествоРасхЗапасПриход</dcsset:field>
+					<dcsset:field>КоличествоРасхНаСкладПриход</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КоличествоРасхЗапасРасход</dcsset:field>
+					<dcsset:field>КоличествоРасхНаСкладКонечныйОстаток</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КоличествоРасхЗапасКонечныйОстаток</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>МенеджерРасхЗапас</dcsset:field>
+					<dcsset:field>ИсполнительРасхНаСклад</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:left xsi:type="dcscor:Field">ДетальРасхЗапас</dcsset:left>
+					<dcsset:left xsi:type="dcscor:Field">ДетальРасхНаСклад</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Комплектующие.ПустаяСсылка</dcsset:right>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>2e46b5ae-c7b5-4171-9461-6ce42e347b1a</dcsset:userSettingID>
+					<dcsset:userSettingID>8f8ce070-3fae-44f3-89fe-cee1b2b21bcc</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Регистратор</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Документ.ДокПриходКомплектующих.ПустаяСсылка</dcsset:right>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>92c4ab67-4196-4aeb-ba21-5e59ba9afd39</dcsset:userSettingID>
 				</dcsset:item>
 			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>НачалоПериода</dcscor:parameter>
-					<dcscor:value xsi:type="v8:StandardBeginningDate">
-						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
-					</dcscor:value>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>5fdb2005-746b-4de2-b886-b687dfd8d462</dcsset:userSettingID>
+					<dcsset:userSettingID>a868b0d5-35e7-46ad-b617-e103e49d8a60</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>КонецПериода</dcscor:parameter>
-					<dcscor:value xsi:type="v8:StandardBeginningDate">
-						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
-					</dcscor:value>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>3ee76f4a-b820-488d-b146-a943f92ceb8d</dcsset:userSettingID>
+					<dcsset:userSettingID>a44ed450-733f-4ceb-8938-7fcb46009be8</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
-			<dcsset:order>
-				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>ДетальРасхЗапас</dcsset:field>
-					<dcsset:orderType>Asc</dcsset:orderType>
-				</dcsset:item>
-			</dcsset:order>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>МакетОформления</dcscor:parameter>
 					<dcscor:value xsi:type="xs:string">Яркий</dcscor:value>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>6bf9a964-26b4-4877-ab2f-50d46d7248f6</dcsset:userSettingID>
+					<dcsset:userSettingID>e46db0e5-e6f8-4de7-a561-107860649b60</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
 					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Auto</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>300d3cbc-e384-4043-bf09-46d0e9ca4be9</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Заголовок</dcscor:parameter>
 					<dcscor:value xsi:type="xs:string"/>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>51a24756-6406-4f1d-9c19-f7b8654108b2</dcsset:userSettingID>
+					<dcsset:userSettingID>0df312ce-bc8c-4675-8d42-788c585f55fd</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
 					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Auto</dcscor:value>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>a3f8e5fc-4ff5-464e-8649-32c4ca9b771e</dcsset:userSettingID>
+					<dcsset:userSettingID>dc279f17-a1bd-4d0b-9d1d-a913ae6f28f5</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
 					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Auto</dcscor:value>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>c32796ac-5d57-4573-9e60-534da95685aa</dcsset:userSettingID>
+					<dcsset:userSettingID>b9d20330-1692-4ebc-ad18-8cd2cd22f64e</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
-				<dcsset:groupItems>
-					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>МенеджерРасхЗапас</dcsset:field>
-						<dcsset:groupType>Items</dcsset:groupType>
-						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-					</dcsset:item>
-				</dcsset:groupItems>
 				<dcsset:order>
 					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 				</dcsset:order>
 				<dcsset:selection>
 					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 				</dcsset:selection>
-				<dcsset:item xsi:type="dcsset:StructureItemGroup">
-					<dcsset:order>
-						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-					</dcsset:order>
-					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-					</dcsset:selection>
-				</dcsset:item>
 			</dcsset:item>
 		</dcsset:settings>
 	</settingsVariant>

@@ -31,7 +31,7 @@
 					<v8:content>Комплектующие</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment/>
+			<Comment>Данный справочник содержит номенклатуру (наименование+модель+марка) Расходных и Основных комплектующих</Comment>
 			<Hierarchical>true</Hierarchical>
 			<HierarchyType>HierarchyFoldersAndItems</HierarchyType>
 			<LimitLevelCount>true</LimitLevelCount>
@@ -326,7 +326,12 @@
 					<v8:content>Комплектующие</v8:content>
 				</v8:item>
 			</ExtendedListPresentation>
-			<Explanation/>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данный справочник содержит номенклатуру (наименование+модель+марка) Расходных и Основных комплектующих.</v8:content>
+				</v8:item>
+			</Explanation>
 			<CreateOnInput>Use</CreateOnInput>
 			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 		</Properties>

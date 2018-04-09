@@ -84,36 +84,16 @@
 					<ContextMenu name="IDТерминалаКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="IDТерминалаРасширеннаяПодсказка" id="24"/>
 				</LabelField>
-				<LabelField name="ПорядковыйНомер" id="34">
-					<DataPath>1/30</DataPath>
-					<ContextMenu name="ПорядковыйНомерКонтекстноеМеню" id="35"/>
-					<ExtendedTooltip name="ПорядковыйНомерРасширеннаяПодсказка" id="36"/>
-				</LabelField>
-				<LabelField name="НаименованиеТерминала" id="37">
-					<DataPath>1/42</DataPath>
-					<ContextMenu name="НаименованиеТерминалаКонтекстноеМеню" id="38"/>
-					<ExtendedTooltip name="НаименованиеТерминалаРасширеннаяПодсказка" id="39"/>
-				</LabelField>
-				<LabelField name="МеткаИнкассатораИнкассатор" id="40">
-					<DataPath>1/53/103</DataPath>
-					<ContextMenu name="МеткаИнкассатораИнкассаторКонтекстноеМеню" id="41"/>
-					<ExtendedTooltip name="МеткаИнкассатораИнкассаторРасширеннаяПодсказка" id="42"/>
-				</LabelField>
-				<LabelField name="МеткаИнкассатора" id="43">
-					<DataPath>1/53</DataPath>
-					<ContextMenu name="МеткаИнкассатораКонтекстноеМеню" id="44"/>
-					<ExtendedTooltip name="МеткаИнкассатораРасширеннаяПодсказка" id="45"/>
-				</LabelField>
-				<LabelField name="Аренда" id="28">
-					<DataPath>1/11</DataPath>
-					<ContextMenu name="АрендаКонтекстноеМеню" id="29"/>
-					<ExtendedTooltip name="АрендаРасширеннаяПодсказка" id="30"/>
-				</LabelField>
-				<LabelField name="Активность" id="31">
-					<DataPath>1/16</DataPath>
-					<ContextMenu name="АктивностьКонтекстноеМеню" id="32"/>
-					<ExtendedTooltip name="АктивностьРасширеннаяПодсказка" id="33"/>
-				</LabelField>
+				<InputField name="Поле2" id="61">
+					<DataPath>Список.Ref.Невидимоеполе</DataPath>
+					<ContextMenu name="Поле2КонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="Поле2РасширеннаяПодсказка" id="63"/>
+				</InputField>
+				<InputField name="Поле1" id="58">
+					<DataPath>Список.Ref.Эксплуатация</DataPath>
+					<ContextMenu name="Поле1КонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="Поле1РасширеннаяПодсказка" id="60"/>
+				</InputField>
 				<LabelField name="СерийныйНомерТермин" id="52">
 					<DataPath>Список.СерийныйНомерТермин</DataPath>
 					<ContextMenu name="СерийныйНомерТерминКонтекстноеМеню" id="53"/>
@@ -124,12 +104,6 @@
 					<ContextMenu name="СистемаМониторингаКонтекстноеМеню" id="56"/>
 					<ExtendedTooltip name="СистемаМониторингаРасширеннаяПодсказка" id="57"/>
 				</LabelField>
-				<CheckBoxField name="Договор" id="49">
-					<DataPath>Список.Договор</DataPath>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ДоговорКонтекстноеМеню" id="50"/>
-					<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="51"/>
-				</CheckBoxField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -161,6 +135,11 @@
 					</dcsset:conditionalAppearance>
 				</ListSettings>
 			</Settings>
+		</Attribute>
+		<Attribute name="Реквизит1" id="2">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Терминалы</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 </Form>
