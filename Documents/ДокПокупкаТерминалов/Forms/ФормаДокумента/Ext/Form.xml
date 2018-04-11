@@ -12,6 +12,9 @@
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
 	<ChildItems>
 		<InputField name="Номер" id="1">
 			<DataPath>Объект.Number</DataPath>
@@ -82,8 +85,12 @@
 					<DataPath>Объект.НовыеТерминалы.НовыйТерминал</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<FooterDataPath>Объект.НовыеТерминалы.RowsCount</FooterDataPath>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 					<ContextMenu name="НовыеТерминалыТерминалКонтекстноеМеню" id="36"/>
 					<ExtendedTooltip name="НовыеТерминалыТерминалРасширеннаяПодсказка" id="37"/>
+					<Events>
+						<Event name="OnChange">НовыеТерминалыТерминалПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="НовыеТерминалыСерийныйНомер" id="38">
 					<DataPath>Объект.НовыеТерминалы.СерийныйНомер</DataPath>
@@ -97,6 +104,12 @@
 					<ContextMenu name="НовыеТерминалыХарактеристикаКонтекстноеМеню" id="42"/>
 					<ExtendedTooltip name="НовыеТерминалыХарактеристикаРасширеннаяПодсказка" id="43"/>
 				</InputField>
+				<LabelField name="НовыеТерминалыНовыйТерминалХарактеристики" id="61">
+					<DataPath>Объект.НовыеТерминалы.НовыйТерминал.Характеристики</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НовыеТерминалыНовыйТерминалХарактеристикиКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="НовыеТерминалыНовыйТерминалХарактеристикиРасширеннаяПодсказка" id="63"/>
+				</LabelField>
 				<InputField name="НовыеТерминалыЦена" id="44">
 					<DataPath>Объект.НовыеТерминалы.Цена</DataPath>
 					<EditMode>EnterOnInput</EditMode>

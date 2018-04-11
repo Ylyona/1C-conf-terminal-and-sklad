@@ -701,6 +701,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.ОтчетОстатокРасхНаСкладе</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.ОтчетПродажаТерминалов</name>
 		<right>
 			<name>Use</name>
@@ -775,6 +786,25 @@
 		</right>
 		<right>
 			<name>InteractiveDeleteMarkedPredefinedData</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.Цены</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1266,6 +1296,17 @@
 		<name>Catalog.Менеджеры</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.ПробуюДвижениеРасходныхДеталей</name>
+		<right>
+			<name>Use</name>
 			<value>true</value>
 		</right>
 		<right>
