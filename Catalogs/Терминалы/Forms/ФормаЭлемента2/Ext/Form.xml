@@ -116,6 +116,12 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
+		<InputField name="Невидимоеполе" id="397">
+			<DataPath>ТекущаяМетка</DataPath>
+			<Visible>false</Visible>
+			<ContextMenu name="НевидимоеполеКонтекстноеМеню" id="398"/>
+			<ExtendedTooltip name="НевидимоеполеРасширеннаяПодсказка" id="399"/>
+		</InputField>
 		<InputField name="ТекущаяМетка" id="304">
 			<DataPath>ТекущаяМетка</DataPath>
 			<ReadOnly>true</ReadOnly>
@@ -156,6 +162,7 @@
 		</InputField>
 		<CheckBoxField name="Эксплуатация" id="394">
 			<DataPath>Объект.Эксплуатация</DataPath>
+			<Visible>false</Visible>
 			<ReadOnly>true</ReadOnly>
 			<CheckBoxType>Auto</CheckBoxType>
 			<ContextMenu name="ЭксплуатацияКонтекстноеМеню" id="395"/>
@@ -382,11 +389,6 @@
 							<ContextMenu name="ДоговорПроведенКонтекстноеМеню" id="381"/>
 							<ExtendedTooltip name="ДоговорПроведенРасширеннаяПодсказка" id="382"/>
 						</CheckBoxField>
-						<InputField name="Невидимоеполе" id="397">
-							<DataPath>НаРуках</DataPath>
-							<ContextMenu name="НевидимоеполеКонтекстноеМеню" id="398"/>
-							<ExtendedTooltip name="НевидимоеполеРасширеннаяПодсказка" id="399"/>
-						</InputField>
 						<InputField name="Договор" id="353">
 							<DataPath>Договор</DataPath>
 							<ReadOnly>true</ReadOnly>

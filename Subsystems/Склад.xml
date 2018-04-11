@@ -30,9 +30,9 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоступлениеРасходныхДеталей</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстатокРДУМенеджеров</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ДвижениеОсновныхСредств</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">c0aa35ce-3e37-4516-8067-8c7af991abbd</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПробуюДвижениеРасходныхДеталей</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоРемонтуРасходныхДеталей</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетОстатокРасхНаСкладе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Цены</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

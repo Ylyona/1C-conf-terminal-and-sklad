@@ -79,31 +79,68 @@
 					<ContextMenu name="КодКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="21"/>
 				</LabelField>
-				<LabelField name="IDТерминала" id="22">
-					<DataPath>Список.IDТерминала</DataPath>
-					<ContextMenu name="IDТерминалаКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="IDТерминалаРасширеннаяПодсказка" id="24"/>
+				<LabelField name="НомерВСистеме" id="61">
+					<DataPath>Список.НомерВСистеме</DataPath>
+					<ContextMenu name="НомерВСистемеКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="НомерВСистемеРасширеннаяПодсказка" id="63"/>
 				</LabelField>
-				<InputField name="Поле2" id="61">
-					<DataPath>Список.Ref.Невидимоеполе</DataPath>
-					<ContextMenu name="Поле2КонтекстноеМеню" id="62"/>
-					<ExtendedTooltip name="Поле2РасширеннаяПодсказка" id="63"/>
-				</InputField>
-				<InputField name="Поле1" id="58">
-					<DataPath>Список.Ref.Эксплуатация</DataPath>
-					<ContextMenu name="Поле1КонтекстноеМеню" id="59"/>
-					<ExtendedTooltip name="Поле1РасширеннаяПодсказка" id="60"/>
-				</InputField>
 				<LabelField name="СерийныйНомерТермин" id="52">
 					<DataPath>Список.СерийныйНомерТермин</DataPath>
 					<ContextMenu name="СерийныйНомерТерминКонтекстноеМеню" id="53"/>
 					<ExtendedTooltip name="СерийныйНомерТерминРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="IDТерминала" id="22">
+					<DataPath>Список.IDТерминала</DataPath>
+					<ContextMenu name="IDТерминалаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="IDТерминалаРасширеннаяПодсказка" id="24"/>
 				</LabelField>
 				<LabelField name="СистемаМониторинга" id="55">
 					<DataPath>Список.СистемаМониторинга</DataPath>
 					<ContextMenu name="СистемаМониторингаКонтекстноеМеню" id="56"/>
 					<ExtendedTooltip name="СистемаМониторингаРасширеннаяПодсказка" id="57"/>
 				</LabelField>
+				<LabelField name="НевидимоеполеНаименование" id="79">
+					<DataPath>Список.Невидимоеполе.Description</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Метка</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НевидимоеполеНаименованиеКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="НевидимоеполеНаименованиеРасширеннаяПодсказка" id="81"/>
+				</LabelField>
+				<LabelField name="НевидимоеполеМенеджер" id="82">
+					<DataPath>Список.Невидимоеполе.Менеджер</DataPath>
+					<ContextMenu name="НевидимоеполеМенеджерКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="НевидимоеполеМенеджерРасширеннаяПодсказка" id="84"/>
+				</LabelField>
+				<LabelField name="СимКартаТермин" id="64">
+					<DataPath>Список.СимКартаТермин</DataPath>
+					<ContextMenu name="СимКартаТерминКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="СимКартаТерминРасширеннаяПодсказка" id="66"/>
+				</LabelField>
+				<LabelField name="СимКартаТерминПровайдер" id="73">
+					<DataPath>Список.СимКартаТермин.Провайдер</DataPath>
+					<ContextMenu name="СимКартаТерминПровайдерКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="СимКартаТерминПровайдерРасширеннаяПодсказка" id="75"/>
+				</LabelField>
+				<LabelField name="ФискальныйСервер" id="70">
+					<DataPath>Список.ФискальныйСервер</DataPath>
+					<ContextMenu name="ФискальныйСерверКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="ФискальныйСерверРасширеннаяПодсказка" id="72"/>
+				</LabelField>
+				<CheckBoxField name="Договор" id="76">
+					<DataPath>Список.Договор</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДоговорКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="78"/>
+				</CheckBoxField>
+				<InputField name="Поле1" id="58">
+					<DataPath>Список.Ref.Эксплуатация</DataPath>
+					<ContextMenu name="Поле1КонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="Поле1РасширеннаяПодсказка" id="60"/>
+				</InputField>
 			</ChildItems>
 		</Table>
 	</ChildItems>

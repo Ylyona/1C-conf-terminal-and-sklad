@@ -147,6 +147,7 @@
 			<Role>АдминистраторБезКонф</Role>
 			<CommonModule>ФункцииТерминалов</CommonModule>
 			<CommonModule>ФункцииДеталей</CommonModule>
+			<CommonModule>ФункцияПолучитьЦену</CommonModule>
 			<CommonForm>ФормаРСО</CommonForm>
 			<Catalog>Терминалы</Catalog>
 			<Catalog>ФискальныеСерверы</Catalog>
@@ -190,8 +191,10 @@
 			<Report>ДвижениеОсновныхСредств</Report>
 			<Report>ОтчетПоступлениеРасходныхДеталей</Report>
 			<Report>ОстатокРДУМенеджеров</Report>
+			<Report>ПробуюДвижениеРасходныхДеталей</Report>
 			<Report>ОтчетПоРемонтуРасходныхДеталей</Report>
 			<Report>ОтчетПокупкаТерминалов</Report>
+			<Report>ОтчетПоРемонтуРасходныхСредствПерваяВерсия</Report>
 			<Report>ОтчетПродажаТерминалов</Report>
 			<Report>ОплатаАрендыКирилл</Report>
 			<Report>ОтчетОстатокРасхНаСкладе</Report>
@@ -206,6 +209,7 @@
 			<InformationRegister>РемонтОсновныхДеталей</InformationRegister>
 			<InformationRegister>ПокупкаТерминала</InformationRegister>
 			<InformationRegister>ПродажаТерминалов</InformationRegister>
+			<InformationRegister>Цены</InformationRegister>
 			<AccumulationRegister>ОстаткиДеталей</AccumulationRegister>
 			<AccumulationRegister>Используется</AccumulationRegister>
 			<AccumulationRegister>ВЗапас</AccumulationRegister>
